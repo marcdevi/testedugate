@@ -1,0 +1,3 @@
+<?php 
+
+$candidatures = getCandidature($db);
