@@ -1,0 +1,15 @@
+{
+    "name": "marct/testedugate",
+    "description": "testedugate",
+    "type": "projet",
+    "authors": [
+        {
+            "name": "marcdevi",
+            "email": "rikemarcdevy.ngbehin@hetic.net"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "phpmailer/phpmailer": "^6.6"
+    }
+}
