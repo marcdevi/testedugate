@@ -47,7 +47,7 @@ $candidature = showCandidature($db, $id);
     </nav>
     </header>
     <main class="mt-5 row mx-5">
-        <?php require '../../app/controllers/UpdateCandidatureController.php' ?>
+        <?php require '../../app/controllers/UpdateDemandeController.php' ?>
         <div class="col-md-12">
             <h1>Modifier la candidature de <?= $candidature[0]['nom'] ?></h1>
             <form class="mt-5 row justify-content-between" method="post" enctype="multipart/form-data">
