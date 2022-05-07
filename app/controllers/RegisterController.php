@@ -39,7 +39,7 @@ if(
             "cv" => $newCvName
         ];
         addCandidature($db, $data);
-        require 'ComfirmationController.php';
+        require 'ConfirmationController.php';
         header('Location: ../../remercimentCandidature.php');
     } else {
         $error = "Extension invalide";

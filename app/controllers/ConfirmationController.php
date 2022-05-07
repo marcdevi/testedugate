@@ -27,7 +27,7 @@ try {
 
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
-    $mail->Subject = 'Comfirmation de candidature';
+    $mail->Subject = 'Confirmation de candidature';
     $mail->Body    = '<p>Nous avons recu votre candidature,</p><br><p>Nous allons vous venir dans les plus bref délais<br><br><br><p>Bien cordialement.</p>,</p>';
     $mail->AltBody = 'Nous avons recu votre candidature, Nous allons vous venir dans les plus bref délais, Bien cordialement.';
 

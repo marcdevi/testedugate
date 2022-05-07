@@ -89,7 +89,7 @@ require '../../app/controllers/AdminController.php';
                                 <td><a name="" id="" class="btn btn-warning" href="updatecandidature.php?candidature=<?=$candidature['id']?>" role="button">Modifier</a></td>
                                 <td><a name="" id="" class="btn btn-danger" href="deletecandidature.php?candidature=<?=$candidature['id']?>" role="button">Supprimer</a></td>
                                 <td><a name="" id="" class="btn btn-success" href="acceptecandidature.php?candidature=<?=$candidature['id']?>" role="button">ACCEPTE</a></td>
-                                <td><a name="" id="" class="btn btn-primary" href="deleteedition.php?edition=<?=$edition['id']?>" role="button">TESTVALIDE</a></td>
+                                <td><a name="" id="" class="btn btn-primary" href="testvalide.php?candidature=<?=$candidature['id']?>" role="button">TESTVALIDE</a></td>
                             </tr>
                             <?php endforeach; ?> 
                         </tbody>
