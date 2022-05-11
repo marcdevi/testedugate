@@ -9,6 +9,7 @@ require '../../public/PHPMailer/PHPMailer/PHPMailerAutoload.php';
 
 //Create an instance; passing `true` enables exceptions
 $mail = new PHPMailer(true);
+$mail->CharSet = 'UTF-8';
 
 try {
     //Server settings
@@ -29,8 +30,7 @@ try {
     $mail->isHTML(true);                                  //Set email format to HTML
     $mail->Subject = "Test validé";
     $mail->Body    = "<p>Bonjour $nom</p><br><p>Nous sommes ravis que vous faites parti maintenant de la communauté EDUGATE!.<br>
-    Vous trouverez ci-dessous le lien pour la creation de votre compte (le lien de Formulaire de Creation<br>
-    de Compte Enseignant/ Tuteur)</p>";
+    Vous trouverez ci-dessous le lien pour la creation de votre compte: <br><a href=\"http://testedugate.test/tuteur/registercompte.php\">Formulaire d'inscription</a> </p>";
     $mail->AltBody = '';
 
     $mail->send();

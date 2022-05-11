@@ -5,8 +5,8 @@ require '../../app/models/function.php';
 use App\Database;
 
 $db = new Database('testedugate'); 
-//require '../../app/controllers/AdminController.php';
-?><!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -29,22 +29,6 @@ $db = new Database('testedugate');
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link disabled">Disabled</a>
-                </li>
-            </ul>
-            </div>
         </div>
     </nav>
     </header>
@@ -162,9 +146,16 @@ $db = new Database('testedugate');
                         <h4>Plage horaire *</h4>
                         <select class="form-select w-100" id="inputGroupSelect02" name="plagehoraire">
                             <option selected>Choisir...</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
+                            <option value="9H00–09H30">9H00 – 09H30</option>
+                            <option value="9H30–10H30">9H30 – 10H30</option>
+                            <option value="10H30–11H30">10H30 – 11H30</option>
+                            <option value="11H30–12H30">11H30 – 12H30</option>
+                            <option value="12H30–13H30">12H30 – 13H30</option>
+                            <option value="13H30–14H30">13H30 – 14H30</option>
+                            <option value="14H30–15H30">14H30 – 15H30</option>
+                            <option value="15H30–16H30">15H30 – 16H30</option>
+                            <option value="16H30–17H30">16H30 – 17H30</option>
+                            <option value="17H30–18H30">17H30 – 18H30</option>                            
                         </select>
                     </div>
 

@@ -1,4 +1,5 @@
 <?php 
+session_start();
 $title = 'Dashboard';
 require '../../vendor/autoload.php';
 require '../../app/models/function.php';
@@ -6,6 +7,9 @@ use App\Database;
 
 $db = new Database('testedugate'); 
 require '../../app/controllers/AdminDemandeController.php';
+if (!isConnected()) {
+    header('Location: login.php');
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,12 +36,15 @@ require '../../app/controllers/AdminDemandeController.php';
             <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">LISTE DES CANDIDATURES</a>
+                <a class="nav-link" aria-current="page" href="dashboard.php">LISTE DES CANDIDATURES</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="#">LISTE DES DEMANDES</a>
+                <a class="nav-link active" href="dashboarddemande.php">LISTE DES DEMANDES</a>
                 </li>
             </ul>
+            </div>
+            <div class="d-flex">
+                <a href="logout.php"><p>Se déconnecter</p></a>
             </div>
         </div>
     </nav>
@@ -90,9 +97,9 @@ require '../../app/controllers/AdminDemandeController.php';
                                 <td><?= $demande['plagehoraire']?></td>
                                 <td><?= $demande['message']?></td>
                                 <td><a name="" id="" class="btn btn-warning" href="updatedemande.php?demande=<?=$demande['id']?>" role="button">Modifier</a></td>
-                                <td><a name="" id="" class="btn btn-danger" href="deletedemande.php?candidature=<?=$demande['id']?>" role="button">Supprimer</a></td>
-                                <td><a name="" id="" class="btn btn-success" href="acceptecandidature.php?candidature=<?=$demande['id']?>" role="button">ACCEPTE</a></td>
-                                <td><a name="" id="" class="btn btn-primary" href="testvalide.php?candidature=<?=$demande['id']?>" role="button">TESTVALIDE</a></td>
+                                <td><a name="" id="" class="btn btn-danger" href="deletedemande.php?demande=<?=$demande['id']?>" role="button">Supprimer</a></td>
+                                <td><a name="" id="" class="btn btn<?php if($demande['assigne']>0){echo'-outline';} ?>-success" href="assignedemande.php?demande=<?=$demande['id']?>" role="button">ASSIGNE</a></td>
+                                <td><a name="" id="" class="btn btn<?php if($demande['propose']>0){echo'-outline';} ?>-primary" href="proposedemande.php?demande=<?=$demande['id']?>" role="button">PROPOSE</a></td>
                             </tr>
                             <?php endforeach; ?> 
                         </tbody>

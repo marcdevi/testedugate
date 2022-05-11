@@ -41,11 +41,10 @@ if(
         addCandidature($db, $data);
         require 'ConfirmationController.php';
         header('Location: ../../remercimentCandidature.php');
-    } else {
+    } 
+} else {
+    if(isset($_POST['submit'])) {
         $error = "Extension invalide";
-    };
-    $emailExit = mailExit($email, $db);
-    if($emailExit){
-        $error = "Mail invalide";
     }
-}
+};
+

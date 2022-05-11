@@ -2,7 +2,7 @@
 $title = 'Dashboard';
 require '../../vendor/autoload.php';
 require '../../app/models/function.php';
-$id = $_GET['candidature'];
+$id = $_GET['demande'];
 use App\Database;
 
 $db = new Database('testedugate'); 

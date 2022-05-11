@@ -8,8 +8,7 @@ use App\Database;
 $db = new Database('testedugate'); 
 
 $demande = showDemande($db, $id);
-$demande[0]['date'] = str_replace("-","/",$demande[0]['date'])
-
+$demande[0]['date'] = str_replace("-","/",$demande[0]['date']);
 
 ?>
 <!DOCTYPE html>

@@ -5,6 +5,7 @@ require '../../app/models/function.php';
 $id = $_GET['candidature'];
 use App\Database;
 
+
 $db = new Database('testedugate'); 
 
 $query = $db->getPDO()->prepare('DELETE FROM candidature WHERE id = :id');

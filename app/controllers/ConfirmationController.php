@@ -9,6 +9,7 @@ require '../public/PHPMailer/PHPMailer/PHPMailerAutoload.php';
 
 //Create an instance; passing `true` enables exceptions
 $mail = new PHPMailer(true);
+$mail->CharSet = 'UTF-8';
 
 try {
     //Server settings
@@ -28,7 +29,7 @@ try {
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
     $mail->Subject = 'Confirmation de candidature';
-    $mail->Body    = '<p>Nous avons recu votre candidature,</p><br><p>Nous allons vous venir dans les plus bref délais<br><br><br><p>Bien cordialement.</p>,</p>';
+    $mail->Body    = '<p>Nous avons recu votre candidature,</p><br><p>Nous allons vous revenir dans les plus bref délais<br><br><br><p>Bien cordialement.</p>,</p>';
     $mail->AltBody = 'Nous avons recu votre candidature, Nous allons vous venir dans les plus bref délais, Bien cordialement.';
 
     $mail->send();

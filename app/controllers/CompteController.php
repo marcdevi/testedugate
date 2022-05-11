@@ -28,7 +28,7 @@ if(
         $photoInfo = pathinfo($photoName);
         $photoTmpName = $_FILES['photo']['tmp_name'];
         $valideExtension = ['jpeg','jpg', 'png',];
-        if (in_array($photoInfo['extension'], $valideExtension)) {
+        if (isset($photoInfo['extension']) && in_array($photoInfo['extension'], $valideExtension)) {
             $newPhotoName= "../img/photo/".date('Y_m_d').time().'1.'.$photoInfo['extension'];
             move_uploaded_file($photoTmpName, $newPhotoName);
             $cle = rand(10000, 99999);

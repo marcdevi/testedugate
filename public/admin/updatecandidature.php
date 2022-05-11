@@ -9,7 +9,6 @@ $db = new Database('testedugate');
 
 $candidature = showCandidature($db, $id);
 
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +24,6 @@ $candidature = showCandidature($db, $id);
     <title><?= $title ?></title>
 </head>
 <body>
-    <?php var_dump($candidature) ?>
     <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">

@@ -9,6 +9,7 @@ require '../../public/PHPMailer/PHPMailer/PHPMailerAutoload.php';
 
 //Create an instance; passing `true` enables exceptions
 $mail = new PHPMailer(true);
+$mail->CharSet = 'UTF-8';
 
 try {
     //Server settings

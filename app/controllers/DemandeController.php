@@ -36,11 +36,12 @@ if(
         "date" => $date,
     ];
     if(isset($_POST['epcm'])) {
-        $datas = ["email" => $email];
+        $datass = ["email" => $email];
         addEpcm($db, $datass);
     }
     addDemande($db, $data);
-    var_dump($data);
+    require 'ConfirmationDemandeController.php' ;
+    header('Location: remerciment.php');
     } else {
         $error = 'Remplissez tous les champs';
     }

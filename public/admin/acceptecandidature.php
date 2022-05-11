@@ -10,6 +10,7 @@ $db = new Database('testedugate');
 $candidature = showCandidature($db, $id);
 $email = $candidature[0]['email'];
 $nom = $candidature[0]['nom'];
+addAccepte($db, $id);
 require '../../app/controllers/AcceptationController.php';
 header('Location: dashboard.php');
 

@@ -11,6 +11,6 @@ if(isset($_POST['code']) && isset($_GET['id'])) {
             "id" => $id
         ];
         validecompte($db, $data);
-        header('Location: remercimentconfirmationcompte.php');
+        header('Location: login.php');
     }
 }
