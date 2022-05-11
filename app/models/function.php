@@ -136,6 +136,13 @@ function showSkillsById($db, $id) {
     $data = $query->fetchAll(PDO::FETCH_ASSOC);
     return $data;
 }
+function showSkills($db, $id) {
+    $sql = 'SELECT * FROM skills WHERE id = :id';
+    $query = $db->getPDO()->prepare($sql);
+    $query->execute([ "id" => $id]);
+    $data = $query->fetchAll(PDO::FETCH_ASSOC);
+    return $data;
+}
 function showEducation($db, $id, $ide) {
     $sql = 'SELECT * FROM education WHERE id_compte = :id AND id = :ide';
     $query = $db->getPDO()->prepare($sql);

@@ -1,4 +1,5 @@
 <?php
+session_start();
 $title = 'Dashboard';
 require '../../vendor/autoload.php';
 require '../../app/models/function.php';

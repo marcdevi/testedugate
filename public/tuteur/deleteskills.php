@@ -1,9 +1,10 @@
 <?php
+session_start();
 $title = 'Dashboard';
 require '../../vendor/autoload.php';
 require '../../app/models/function.php';
 $id = $_GET['skills'];
-$id_compte = $_GET['compte'];
+$id_compte = $_SESSION['userid'];
 use App\Database;
 
 

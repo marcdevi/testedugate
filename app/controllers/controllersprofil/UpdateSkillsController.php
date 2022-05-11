@@ -4,7 +4,7 @@ if(isConnected()) {
     $id = $_SESSION['userid'];
     $ide = $_GET['skills'];
     $compte = showCompteById($db, $id);
-    $compte_skills = showSkillsById($db, $id);
+    $compte_skills = showSkills($db, $ide);
     if (isset($_POST['skill'])) {
         $skill = htmlspecialchars(trim($_POST['skill']));
         $data = [
